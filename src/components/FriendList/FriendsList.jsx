@@ -1,5 +1,8 @@
 import propTypes from 'prop-types';
 import FriendItem from "./FriendItem";
+import styles from './Friends.module.css';
+
+
 const FriendsList = ({ friends }) => {
     const elements = friends.map(({ id, isOnline, avatar, name }) => <FriendItem
         key={id}
@@ -8,7 +11,7 @@ const FriendsList = ({ friends }) => {
         name={name}
     />)
     return (
-        <ul className="friend-list">
+        <ul className={styles.friendList}>
             {elements}
         </ul>
     )

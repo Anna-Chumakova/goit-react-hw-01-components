@@ -3,10 +3,10 @@ import styles from './Friends.module.css'
 
 const FriendItem = ({ isOnline, avatar, name }) => {
     return (
-        <li className="item">
+        <li className={styles.item}>
             <span className="status">{ isOnline}</span>
             <img className="avatar" src={avatar} alt={name} width="48" />
-            <p className="name">{ name}</p>
+            <p className={styles.name}>{ name}</p>
         </li>
     )
 }
