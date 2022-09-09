@@ -1,4 +1,7 @@
-const FriendItem = ({isOnline, avatar, name }) => {
+import propTypes from 'prop-types';
+import styles from './Friends.module.css'
+
+const FriendItem = ({ isOnline, avatar, name }) => {
     return (
         <li className="item">
             <span className="status">{ isOnline}</span>
@@ -6,5 +9,10 @@ const FriendItem = ({isOnline, avatar, name }) => {
             <p className="name">{ name}</p>
         </li>
     )
+}
+FriendItem.propTypes = {
+    isOnline: propTypes.bool.isRequired,
+    avatar: propTypes.string.isRequired,
+    name: propTypes.string.isRequired,
 }
 export default FriendItem;
