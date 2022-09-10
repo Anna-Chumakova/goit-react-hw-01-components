@@ -11,7 +11,7 @@ const StatisticsSection = ({ title, data }) => {
     )
 }
 StatisticsSection.propTypes = {
-    
+    title: propTypes.string,
     data: propTypes.arrayOf(propTypes.exact({id: propTypes.string.isRequired, label: propTypes.string.isRequired, percentage: propTypes.number.isRequired})
     )
 }

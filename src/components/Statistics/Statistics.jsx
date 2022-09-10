@@ -3,11 +3,11 @@ import StatisticsItem from './StatisticsItem';
 import styles from './Statistics.module.css';
 
 const Statistics = ({ data }) => {
-    const elements = data.map(({ id, label, percentage }) => 
-    <StatisticsItem key={id} label={label} percentage={percentage} />)
+
     return (
         <ul className={styles.statList}>
-         {elements}         
+         {data.map(({ id, label, percentage }) => 
+        <StatisticsItem key={id} label={label} percentage={percentage} />)}         
         </ul>    
     )             
 }
