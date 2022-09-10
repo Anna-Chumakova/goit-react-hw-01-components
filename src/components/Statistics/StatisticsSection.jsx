@@ -5,7 +5,7 @@ import styles from './Statistics.module.css';
 const StatisticsSection = ({ title, data }) => {
     return (
         <div className={styles.conteiner}>
-            {title && <h1 className='title'>{title}</h1>}
+            {title && <h1 className={styles.title}>{title}</h1>}
             <Statistics data={data} />
         </div>
     )
